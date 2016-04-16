@@ -67,7 +67,8 @@ def publish():
     local('pelican -s publishconf.py')
 
 
-def s3_upload():
+def deploy():
     publish()
-    local('python C:\Python27\Scripts\s3cmd.py sync output/ --acl-public --delete-removed --guess-mime-type s3://%s/' %
-          S3BUCKET)
+    with lcd(DEPLOY_PATH):
+        local('aws s3 --profile personal --region us-west-2 sync . s3://%s' % S3BUCKET)
+
