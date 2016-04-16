@@ -1,0 +1,2 @@
+# stephenmccray.com
+Static Website
