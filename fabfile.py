@@ -49,15 +49,16 @@ def serve():
     class AddressReuseTCPServer(SocketServer.TCPServer):
         allow_reuse_address = True
 
-    server = AddressReuseTCPServer(('', PORT), ComplexHTTPRequestHandler)
+    with lcd(DEPLOY_PATH):
+        server = AddressReuseTCPServer(('', PORT), ComplexHTTPRequestHandler)
 
-    sys.stderr.write('Serving on port {0} ...\n'.format(PORT))
-    server.serve_forever()
+        sys.stderr.write('Serving on port {0} ...\n'.format(PORT))
+        server.serve_forever()
 
 
 def reserve():
     """`build`, then `serve`"""
-    build()
+    rebuild()
     serve()
 
 
@@ -69,6 +70,8 @@ def publish():
 
 def deploy():
     publish()
-    with lcd(DEPLOY_PATH):
-        local('aws s3 --profile personal --region us-west-2 sync . s3://%s --acl public-read' % S3BUCKET)
+    local('python C:\Python27\Scripts\s3cmd.py sync output/ --acl-public --delete-removed --guess-mime-type s3://%s/' % S3BUCKET)
+    # publish()
+    # with lcd(DEPLOY_PATH):
+    #     local('aws s3 --profile personal --region us-west-2 sync . s3://%s --acl public-read' % S3BUCKET)
 
