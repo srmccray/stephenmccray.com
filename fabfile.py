@@ -70,5 +70,5 @@ def publish():
 def deploy():
     publish()
     with lcd(DEPLOY_PATH):
-        local('aws s3 --profile personal --region us-west-2 sync . s3://%s' % S3BUCKET)
+        local('aws s3 --profile personal --region us-west-2 sync . s3://%s --acl public-read' % S3BUCKET)
 
