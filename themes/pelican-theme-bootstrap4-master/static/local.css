@@ -1,0 +1,111 @@
+html {
+    font-family:Helvetica,Arial,sans-serif,monospace;
+    overflow-y:visible;
+    overflow-x:hidden;
+    background-color: white;
+}
+
+.github {
+    position:absolute;
+    top:52px;
+    right:0px;
+}
+.github img {
+    border: 0;
+    display: block;
+}
+
+ul.clear-list {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+.summary, .btn-summary {
+    display: inline;
+}
+
+.pagination {
+    margin-top: 24px;
+    padding: 8px;
+}
+
+main {
+    position: absolute;
+    left:0;
+    top:3rem;
+    width:100%;
+    padding: 1.5rem;
+}
+
+.navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.5);
+}
+
+.navbar-toggler .navbar-toggler-icon-custom {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+nav ul.navbar-nav {
+    flex-direction: row;
+}
+
+nav.navbar, .card.card-metadata, .btn.btn-summary {
+    background-color: rgba(244,244,244,1.0);
+    border: 1px solid rgba(200,200,200,1.0);
+}
+
+.navbar.bottom-bar {
+    margin: 2rem -2.5rem -2.5rem;
+    padding: -0.5rem;
+}
+
+.navbar.fixed-top li a, .navbar.bottom-bar a, .card.card-metadata a {
+    padding: 4px;
+}
+
+.navbar.bottom-bar a:hover, .card.card-metadata a:hover {
+    text-decoration: none;
+}
+
+p.lead {
+    margin-bottom: 2em;
+    font-weight: 500;
+}
+
+code {
+    font-size: 1em;
+}
+
+.card.card-metadata {
+    display:block;
+}
+
+.card {
+    display:inline-block;
+}
+
+.card-img-top {
+    max-width:1200px;
+}
+
+.social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='anaconda.org']:before {content: url('./images/icons/anaconda.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='atom.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='bitbucket.org']:before {content: url('./images/icons/bitbucket.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='code.google.com']:before {content: url('./images/icons/phosting.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='del.icio.us']:before {content: url('./images/icons/delicious.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='digg.com']:before {content: url('./images/icons/digg.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='facebook.com']:before {content: url('./images/icons/facebook.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='github.com']:before {content: url('./images/icons/github.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='google.com/reader']:before {content: url('./images/icons/reader.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='jamendo.com']:before {content: url('./images/icons/jamendo.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='last.fm']:before, .social a[href*='lastfm.']:before {content: url('./images/icons/lastfm.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='linkedin.com']:before {content: url('./images/icons/linkedin.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='rss.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='stackoverflow.com']:before {content: url('./images/icons/stackoverflow.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='careers.stackoverflow.com']:before {content: url('./images/icons/careers.stackoverflow.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='twitter.com']:before {content: url('./images/icons/twitter.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='weibo.com']:before {content: url('./images/icons/weibo.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='meetup.com']:before {content: url('./images/icons/meetup.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='instagram.com']:before {content: url('./images/icons/instagram.png'); margin-right: 2px; vertical-align: -3px;}
